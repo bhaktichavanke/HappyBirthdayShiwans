@@ -1,0 +1,93 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Codédex</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"/>
+
+  <style>
+    body {
+      font-family: 'Press Start 2P', cursive;
+    }
+    body.hide-cursor {
+      cursor: none;
+    }
+    #intro-video::-webkit-media-controls {
+      display: none !important;
+    }
+    #intro-video {
+      pointer-events: none;
+    }
+  </style>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const videoContainer = document.getElementById('video-container');
+      const video = document.getElementById('intro-video');
+      const getStartedButton = document.getElementById('get-started-button');
+
+      getStartedButton.addEventListener('click', function () {
+        videoContainer.classList.remove('hidden');
+        document.body.classList.add('hide-cursor');
+        video.play();
+
+        // Request full screen
+        if (video.requestFullscreen) {
+          video.requestFullscreen();
+        } else if (video.webkitRequestFullscreen) {
+          video.webkitRequestFullscreen();
+        } else if (video.msRequestFullscreen) {
+          video.msRequestFullscreen();
+        }
+      });
+
+      document.addEventListener('keydown', function (event) {
+        if (event.key === 's' || event.key === 'S') {
+          video.pause();
+          videoContainer.classList.add('hidden');
+          document.body.classList.remove('hide-cursor');
+          window.location.href = "home.html";
+        }
+      });
+
+      video.addEventListener('ended', function () {
+        document.body.classList.remove('hide-cursor');
+        window.location.href = "home.html";
+      });
+    });
+  </script>
+</head>
+<body class="bg-black text-white">
+  <nav class="bg-black py-4 px-6 flex justify-between items-center">
+    <div class="flex items-center">
+      <img src="https://storage.googleapis.com/a1aa/image/DJhxBXiFOv6BpA5He-Debk3Yf-hQ66pzq-yMATRfqrA.jpg" alt="Codédex logo" class="mr-2" width="30" height="30"/>
+      <span class="text-xl font-bold">404: Age Not Found</span>
+    </div>
+    <button class="bg-yellow-500 text-black px-4 py-2 rounded-md">Sign up</button>
+  </nav>
+
+  <header class="relative h-screen flex flex-col justify-center items-center text-center">
+    <img src="birthday-background.png" alt="Pixelated background with blue sky and green mountains" class="absolute inset-0 w-full h-full object-cover" width="1920" height="1080"/>
+    <div class="relative z-10">
+      <h1 class="text-4xl md:text-6xl font-bold mb-4">WHISHING YOU</h1>
+      <h2 class="text-6xl md:text-8xl font-bold text-yellow-500 mb-4">HAPPY BIRTHDAY</h2>
+      <p class="text-lg md:text-xl mb-8">Hope you like it !!! ✧✧</p>
+      <button class="bg-yellow-500 text-black px-6 py-3 rounded-md text-lg md:text-xl" id="get-started-button">Get Started</button>
+    </div>
+  </header>
+
+  <div class="fixed inset-0 bg-black bg-opacity-75 flex flex-col justify-center items-center z-50 hidden" id="video-container">
+    <p class="absolute top-4 left-4 text-white" id="skip-text">Press 'S' to skip</p>
+    <video id="intro-video" width="800" playsinline>
+      <source src="assets/vdo.mp4" type="video/mp4"/>
+      Your browser does not support the video tag.
+    </video>
+  </div>
+
+  <footer class="bg-black py-4 px-6 text-center">
+    <p class="text-sm mb-4">SURPRISE SURPRISE!!!!</p>
+  </footer>
+</body>
+</html>

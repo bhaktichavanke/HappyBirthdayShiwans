@@ -1,0 +1,220 @@
+<html>
+ <head>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&amp;display=swap" rel="stylesheet"/>
+  <style>
+   body {
+            font-family: 'Press Start 2P', cursive;
+        }
+        .gallery {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 1rem; /* Decreased gap between paragraphs */
+            padding: 2rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 14px; /* Slightly increased font size */
+        }
+        .gallery-row {
+            display: flex;
+            justify-content: center;
+            gap: 6rem; /* Increased gap for more space from the center line */
+            position: relative;
+        }
+        .gallery-row::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 2px;
+            background: white;
+            z-index: -1;
+        }
+        .gallery img {
+            width: 300px;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+        .gallery p {
+            text-align: center;
+            margin-top: 1rem; /* Decreased space between paragraphs */
+        }
+        .gallery-row.hidden {
+            opacity: 0;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+        .gallery-row.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+  </style>
+ </head>
+ <body class="bg-gray-900 text-white">
+  <nav class="flex justify-between items-center p-4 bg-gray-800">
+   <div class="flex items-center">
+    <span class="text-yellow-400 text-2xl font-bold">
+     🪙
+    </span>
+    <span class="ml-2 text-xl font-bold">
+     404: Age Not Found
+    </span>
+   </div>
+   <div class="flex space-x-4">
+   </div>
+   <div class="flex items-center space-x-4">
+    <img alt="User avatar" class="rounded-full" height="30" src="https://storage.googleapis.com/a1aa/image/TPaEAFzAGOSYS1BZTSLgxXnx3glI-aRqwQXYKDLpd-E.jpg" width="30"/>
+    <button class="bg-yellow-400 text-black px-4 py-2 rounded">
+     Join Happyness
+    </button>
+   </div>
+  </nav>
+  <div class="flex flex-col items-center mt-8">
+   <div class="flex items-center space-x-4">
+    <img alt="Retro computer" height="70" src="https://storage.googleapis.com/a1aa/image/JhfatYeQOu2bpf9gZc_MAeVdicVXQ94T1kEPNgGD-6s.jpg" width="70"/>
+    <div class="bg-gray-700 p-2 rounded">
+     <span class="text-yellow-400 font-bold" style="font-family: 'Courier New', Courier, monospace; font-size: 22px;">
+      beyond those walls of yours, these people are still close to your heart, on this special day i wanted to cherish the people that holds a special place in your life
+     </span>
+    </div>
+   </div>
+   <p class="mt-8 text-justify text-2xl" style="font-family: 'Times New Roman', Times, serif; font-weight: normal;">
+    DISCLAIMER -
+   </p>
+   <p class="mt-6 text-justify text-xl" style="font-family: 'Times New Roman', Times, serif; font-weight: normal;">
+    1) Don't be hasty to judge me, please don't judge until you have seen it till the end....
+   </p>
+   <p class="mt-6 text-justify text-xl" style="font-family: 'Times New Roman', Times, serif; font-weight: normal;">
+    2) Some photo are used here, and don't use the word "stalking" for it, cuz "stalking" is
+   </p>
+   <p class="text-justify text-xl" style="font-family: 'Times New Roman', Times, serif; font-weight: normal;">
+    very negative word, my intentions were more positive than that...
+   </p>
+   <p class="mt-6 text-justify text-xl" style="font-family: 'Times New Roman', Times, serif; font-weight: normal;">
+    3) Kuch nhi happy birthday !!!!
+   </p>
+
+   <div class="bg-gray-800 p-8 mt-8 rounded-lg text-center">
+    <h1 class="text-xl font-bold">
+     The Bonds to be Cherished!!!
+    </h1>
+    <div class="flex justify-center mt-4">
+     <button class="bg-blue-500 text-white px-4 py-2 rounded flex items-center">
+      Scroll Down
+      <i class="fas fa-arrow-down ml-2">
+      </i>
+     </button>
+    </div>
+   </div>
+  </div>
+  <div class="gallery">
+   <div class="gallery-row">
+    <div>
+     <img alt="Image 1" height="400" src="assets/image1.png" width="300"/>
+    </div>
+    <div>
+     <img alt="Image 2" height="400" src="assets/img1.jpg" width="300"/>
+    </div>
+   </div>
+   <p>
+    (The first paragraph is to set the base of the story.)
+   </p>
+   <p>
+    We all have our good days and bad days. Some express them, some endure in silence. Among them stands the men who never complains, who works hard for their families, for example they never say ki aaj main bus mein ya train mein dhaka khate huye gaya aur mujhe bethne ki jagh bhi nhi mili, phir office mein aaj ek deadline puri nhi kr paya toh boss ne sunaya...etc.
+   </p>
+   <p>
+    and then come the fathers, for us they didn't have bad days from years, i even lost the count of the days, so i guess you are also one of those who have a great father, and by watching him you learn to be patient, kind, gentle, hardworking, thinks about family every time.... so, cheers to another year where you are becoming a man who carries the weight of responsibilities with grace, who puts others before himself, who, just like his father, stands tall always.
+   </p>
+   <p>
+    I think a man is a beautiful creation of God and Fathers are the good example of it.
+   </p>
+   <div class="gallery-row hidden">
+    <div>
+     <img alt="Image 3" height="400" src="assets/image2.png" width="300"/>
+    </div>
+    <div>
+     <img alt="Image 4" height="400" src="assets/img2.jpg" width="300"/>
+    </div>
+   </div>
+   <p>
+    ummm...ye photo meri personal favorite hai, specially the left one, looks cute, isn't it?
+   </p>
+   <p>
+    I think one of the greatest lessons you learn from your mother is to expect nothing, yet to always prioritize the well-being of those around her. They say that mothers are the first woman in any man's life, and the first teacher of every kid so, here's to the woman who gave you life, and who is always there by your side no matter what, without any expectations.
+   </p>
+   <div class="gallery-row hidden">
+    <div>
+     <img alt="Image 5" height="400" src="assets/image3.png" width="300"/>
+    </div>
+    <div>
+     <img alt="Image 6" height="400" src="assets/img3.jpeg" width="300"/>
+    </div>
+   </div>
+   <p>
+    koi idea nhi ki yaha kya likhu, toh happy birthday!!!
+   </p>
+   <div class="gallery-row hidden">
+    <div>
+     <img alt="Image 7" height="400" src="assets/image4.png" width="300"/>
+    </div>
+    <div>
+     <img alt="Image 8" height="400" src="assets/img4.jpg" width="300"/>
+    </div>
+   </div>
+   <p>
+    We meet new people along the way of life, and we get to know there stories, but sometimes we don't know the stories of those who are always there with us, so, this is the reminder for you to spend time with them, sbhi ke pass hote hai apne kuch kisse kuch kahaniya, aur the lessons they learned in life in hard way...(if already done or if it sounds like bakwas, then yk the meaning of word ignore)
+   </p>
+   <p>
+    Having somewhere to go is home. Having someone to love is family. Having both is a blessing.
+   </p>
+   <div class="gallery-row hidden">
+    <div>
+     <img alt="Image 9" height="400" src="assets/image5.png" width="300"/>
+    </div>
+    <div>
+     <img alt="Image 10" height="400" src="assets/img5.jpg" width="300"/>
+    </div>
+   </div>
+   <p>
+    cheers to the most hardworking persons around !!!
+   </p>
+   <div class="gallery-row hidden">
+    <div>
+     <img alt="Image 11" height="400" src="assets/image6.png" width="300"/>
+    </div>
+    <div>
+     <img alt="Image 12" height="400" src="assets/img6.png" width="300"/>
+    </div>
+   </div>
+   <p>
+    It was good to be around you!!!
+   </p>
+   <p>
+    bohot mitha bol diya tere baare mein ab isse jyada jhoot nhi bola jayega, tu sddu, akdu, batmeez bhi hai, and i hate you!!!!
+   </p>
+   <p>
+    another disclaimer - i am not digging up the past, this was made in hope that...aage khud smjh ja
+   </p>
+  </div>
+  <script>
+   document.addEventListener('scroll', function() {
+            const rows = document.querySelectorAll('.gallery-row.hidden');
+            rows.forEach(row => {
+                const rect = row.getBoundingClientRect();
+                if (rect.top < window.innerHeight) {
+                    row.classList.remove('hidden');
+                    row.classList.add('visible');
+                }
+            });
+        });
+  </script>
+ </body>
+</html>
